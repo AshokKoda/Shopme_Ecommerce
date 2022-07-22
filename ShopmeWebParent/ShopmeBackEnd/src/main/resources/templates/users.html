@@ -52,10 +52,16 @@
 		</div>
 		<div>
 			<h2>Manage Users</h2>
+			<a th:href="@{/users/new}">Create New User</a>
+		</div>
+
+		<div th:if="${message != null}" class="alert alert-success text-center">
+			[[${message}]]
 		</div>
 
 		<div>
-			<table class="table table-bordered table-striped table-hover table-responsive-xl">
+			<table
+				class="table table-bordered table-striped table-hover table-responsive-xl">
 				<thead class="thead-dark">
 					<tr>
 						<th>User-ID</th>
@@ -77,8 +83,8 @@
 						<td>[[${user.lastName}]]</td>
 						<td>[[${user.roles}]]</td>
 						<td>[[${user.enabled}]]</td>
-						<td>Edit &nbsp; Delete</td>
-					</tr>
+						<td>Edit &nbsp; Delete</tr>
+					
 				</tbody>
 			</table>
 		</div>
